@@ -388,7 +388,7 @@ class GLM(base.LikelihoodModel):
         if freq_weights is not None:
             if freq_weights.shape[0] != endog.shape[0]:
                 raise ValueError("freq weights not the same length as endog")
-            if len(freq_weights.shape) > 1:
+            if len(freq_weights.shape) > 2:
                 raise ValueError("freq weights has too many dimensions")
 
         # internal flag to store whether freq_weights were not None
